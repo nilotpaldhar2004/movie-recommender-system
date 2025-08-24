@@ -31,10 +31,10 @@ It contains details like **genres, keywords, cast, crew, and overview** of movie
 
 ## 🔹 Demo  
 
-### 🎬 Example 1
-movie-recommender-system/Images/Demo.png
-### 🎬 Example 2
-movie-recommender-system/Images/Demo.png
+<p align="center">
+  <img src="Images/Demo.png" alt="Demo Image 1" width="400"/>
+  <img src="Images/Demo1.png" alt="Demo Image 2" width="400"/>
+</p>
 
 
 ---
