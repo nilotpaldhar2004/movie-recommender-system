@@ -24,8 +24,10 @@ This system suggests movies similar to the one you select, based on their **tags
 ---
 
 ## 🔹 Dataset
-The dataset is derived from [TMDB Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata).  
+## 🔹 Dataset
+The dataset used in this project is included in this repository under the **`dataset/`** folder.  
 It contains details like **genres, keywords, cast, crew, and overview** of movies.  
+
 
 ---
 
