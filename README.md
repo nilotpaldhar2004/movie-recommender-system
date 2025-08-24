@@ -23,10 +23,12 @@ This system suggests movies similar to the one you select, based on their **tags
 
 ---
 
+
 ## 🔹 Dataset
-## 🔹 Dataset
-The dataset used in this project is included in this repository under the **`Dataset.zip`**.  
+The dataset used in this project is included in this repository as **`Dataset.zip`**.  
 It contains details like **genres, keywords, cast, crew, and overview** of movies.  
+Please extract the `Dataset.zip` file before running the project.  
+
 
 
 ---
