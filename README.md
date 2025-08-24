@@ -23,28 +23,29 @@ This system suggests movies similar to the one you select, based on their **tags
 
 ---
 
-
 ## 🔹 Dataset
 The dataset used in this project is included in this repository as **`Dataset.zip`**.  
 It contains details like **genres, keywords, cast, crew, and overview** of movies.  
-Please extract the `Dataset.zip` file before running the project.  
 
-
+👉 **Before running the project**, make sure to extract the contents of `Dataset.zip`.  
+The extracted folder includes files like:
+- `tmdb_5000_movies.csv`  
+- `tmdb_5000_credits.csv`
 
 ---
 
 ## 🔹 Demo  
 
-<img src="Images/Demo.png" alt="Demo Image 1" width="400"/>
-<img src="Images/Demo1.png" alt="Demo Image 2" width="400"/>
-
+<p float="left">
+  <img src="Images/Demo.png" alt="Demo Image 1" width="400"/>
+  <img src="Images/Demo1.png" alt="Demo Image 2" width="400"/>
+</p>
 
 ---
 
 ## 🔹 Installation & Usage
 
-1. Clone this repository:
+1. **Clone this repository**:
    ```bash
    git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
    cd movie-recommender-system
-
