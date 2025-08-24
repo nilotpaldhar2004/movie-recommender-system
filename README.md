@@ -24,7 +24,8 @@ This system suggests movies similar to the one you select, based on their **tags
 ---
 
 ## 🔹 Dataset
-The dataset used in this project is included in this repository as **`Dataset.zip`**.  
+## 🔹 Dataset
+The dataset used in this project is included as [Dataset.zip](https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Dataset.zip).  
 It contains details like **genres, keywords, cast, crew, and overview** of movies.  
 
 👉 **Before running the project**, make sure to extract the contents of `Dataset.zip`.  
