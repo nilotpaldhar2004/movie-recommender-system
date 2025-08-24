@@ -32,9 +32,10 @@ It contains details like **genres, keywords, cast, crew, and overview** of movie
 ## 🔹 Demo  
 
 ### 🎬 Example 1
-Images/Demo.png
+movie-recommender-system/Images/Demo.png
 ### 🎬 Example 2
-Images/Demo1.png
+movie-recommender-system/Images/Demo.png
+
 
 ---
 
