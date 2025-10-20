@@ -52,8 +52,8 @@ Included files:
 ## 🔹 Demo  
 
 <p float="left">
-  <img src="Images/Demo.gif" alt="Live Demo GIF" width="400"/>
-  <img src="Images/Demo1.png" alt="Static Demo Image" width="400"/>
+  <img src="https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Images/Demo.png" alt="Demo Image 1" width="400"/>
+  <img src="https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Images/Demo1.png" alt="Demo Image 2" width="400"/>
 </p>
 
 ---
