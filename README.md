@@ -47,8 +47,9 @@ Included files:
 5. **Display:** Streamlit shows movies with hover effects and ratings in stars.  
 
 <p align="center">
-  <img src="Images/FlowDiagram.png" alt="How It Works Diagram" width="600"/>
+  <img src="https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Images/FlowDiagram.png" alt="How It Works Diagram" width="600"/>
 </p>
+
 
 ---
 
