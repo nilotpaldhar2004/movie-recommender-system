@@ -47,18 +47,17 @@ Included files:
 5. **Display:** Streamlit shows movies with hover effects and ratings in stars.  
 
 <p align="center">
-  <img src="https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Images/FlowDiagram.png" alt="How It Works Diagram" width="600"/>
+  <img src="Images/FlowDiagram.png" alt="How It Works Diagram" width="600"/>
 </p>
-
 
 ---
 
 ## 🔹 Demo  
 
-<p align="center">
-  <img src="https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Images/FlowDiagram.png" alt="How It Works Diagram" width="600"/>
+<p float="left">
+  <img src="Images/Demo.gif" alt="Live Demo GIF" width="400"/>
+  <img src="Images/Demo1.png" alt="Static Demo Image" width="400"/>
 </p>
-
 
 ---
 
@@ -76,4 +75,3 @@ Try it here:
    ```bash
    git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
    cd movie-recommender-system
-
