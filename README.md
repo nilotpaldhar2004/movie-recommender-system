@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)  
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)  
-![GitHub stars](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=social&cacheSeconds=300)
+
 <!-- GitHub Repository Badges -->
 <p align="center">
   <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers">
