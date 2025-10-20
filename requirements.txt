@@ -9,7 +9,6 @@ joblib==1.3.2
 
 # Machine learning / NLP
 scikit-learn==1.3.2
-nltk==3.9.2
 
 # Visualization (optional, only if you use plots)
 matplotlib==3.8.1
