@@ -3,6 +3,24 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)  
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)  
 ![GitHub stars](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=social&cacheSeconds=300)
+<!-- GitHub Repository Badges -->
+<p align="center">
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers">
+    <img src="https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=social&cacheSeconds=300" alt="GitHub stars"/>
+  </a>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/network/members">
+    <img src="https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=social&cacheSeconds=300" alt="GitHub forks"/>
+  </a>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/issues">
+    <img src="https://img.shields.io/github/issues/nilotpaldhar2004/movie-recommender-system" alt="GitHub issues"/>
+  </a>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/nilotpaldhar2004/movie-recommender-system" alt="License"/>
+  </a>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/commits/main">
+    <img src="https://img.shields.io/github/last-commit/nilotpaldhar2004/movie-recommender-system" alt="Last Commit"/>
+  </a>
+</p>
 
 A **Content-Based Movie Recommendation System** built with **Python, NLP, and Streamlit**.  
 This system suggests movies similar to the one you select, based on **tags** (overview, genre, keywords, cast, crew).  
