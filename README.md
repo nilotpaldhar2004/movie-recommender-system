@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python&logoColor=white)  
 ![Streamlit](https://img.shields.io/badge/Streamlit-App-red?logo=streamlit&logoColor=white)  
-![GitHub stars](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=social) 
+![GitHub stars](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=social&cacheSeconds=300)
 
 A **Content-Based Movie Recommendation System** built with **Python, NLP, and Streamlit**.  
 This system suggests movies similar to the one you select, based on **tags** (overview, genre, keywords, cast, crew).  
