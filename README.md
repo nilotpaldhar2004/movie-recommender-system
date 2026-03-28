@@ -54,7 +54,16 @@ This system implements a vector-space model to find similarities between over 5,
    ```bash
    git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
    cd movie-recommender-system
+   
+2. **Install Dependencies:**
 
+Bash
+pip install -r requirements.txt
+
+3. **Run the Application:**
+
+Bash
+streamlit run app.py
 ## 📈 Project Insights
 
 <p align="center">
@@ -68,3 +77,7 @@ This system implements a vector-space model to find similarities between over 5,
 </p>
 
 ---
+##🔹 License
+Distributed under the MIT License. See LICENSE for more information.
+
+Developed by Nilotpal Dhar • March 2025
