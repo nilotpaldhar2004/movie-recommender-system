@@ -56,12 +56,14 @@ This system implements a vector-space model to find similarities between over 5,
    cd movie-recommender-system
 
 
-1. **Install Dependencies:**
+2. **Install Dependencies:**
    ```bash
    pip install -r requirements.txt
+---
+3. **Run the Application:**
+   ```bash
    streamlit run app.py
 ---
-
 
 📈 Project Insights
 <p align="center">
@@ -74,9 +76,7 @@ This system implements a vector-space model to find similarities between over 5,
 </p>
 
 ---
-
-🔹 License
+##🔹 License
 ---
 Distributed under the MIT License. See LICENSE for more information.
----
-Developed by Nilotpal Dhar • March 2026
+Developed by **Nilotpal Dhar** • March 2026
