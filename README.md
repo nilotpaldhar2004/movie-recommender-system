@@ -71,12 +71,18 @@ The project utilizes the **TMDB 5000 Movie Dataset**.
    cd movie-recommender-system
 ---
 
+---
+
 ## 📈 Project Insights
 
 <p align="center">
   <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
     <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
   </a>
+</p>
+
+<p align="center">
+  <i>Track the growth of this project over time!</i>
 </p>
 
 ---
