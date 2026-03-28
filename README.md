@@ -55,29 +55,17 @@ This system implements a vector-space model to find similarities between over 5,
    git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
    cd movie-recommender-system
    
-2. **Install Dependencies:**
+Install Dependencies:
 
-Bash
 pip install -r requirements.txt
 
-3. **Run the Application:**
+Run the Application:
 
-Bash
 streamlit run app.py
-## 📈 Project Insights
+📈 Project Insights
+<p align="center"> <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date"> <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/> </a> </p> <p align="center"> <i>Track the growth of this project over time!</i> </p>
+🔹 License
 
-<p align="center">
-  <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
-    <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
-  </a>
-</p>
-
-<p align="center">
-  <i>Track the growth of this project over time!</i>
-</p>
-
----
-## 🔹 License
 Distributed under the MIT License. See LICENSE for more information.
 
 Developed by Nilotpal Dhar • March 2026
