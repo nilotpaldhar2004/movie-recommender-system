@@ -69,3 +69,14 @@ The project utilizes the **TMDB 5000 Movie Dataset**.
    ```bash
    git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
    cd movie-recommender-system
+---
+
+## 📈 Project Insights
+
+<p align="center">
+  <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
+    <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
+  </a>
+</p>
+
+---
