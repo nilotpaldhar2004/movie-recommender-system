@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Streamlit
+.streamlit/
+static/
+
+# Dataset (Optional: if you want users to download it themselves to save space)
+*.csv
+*.zip
+*.pkl
