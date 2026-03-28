@@ -56,21 +56,12 @@ This system implements a vector-space model to find similarities between over 5,
 
 ---
 
-## 🔹 Dataset
-The project utilizes the **TMDB 5000 Movie Dataset**. 
-- Download: [Dataset.zip](https://github.com/nilotpaldhar2004/movie-recommender-system/raw/main/Dataset.zip)
-- *Note:* Ensure `tmdb_5000_movies.csv` and `tmdb_5000_credits.csv` are in the project root before execution.
-
----
-
 ## 🔹 Installation & Local Setup
 
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
    cd movie-recommender-system
----
-
 ---
 
 ## 📈 Project Insights
