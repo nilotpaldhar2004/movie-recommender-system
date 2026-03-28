@@ -77,7 +77,7 @@ streamlit run app.py
 </p>
 
 ---
-##🔹 License
+## 🔹 License
 Distributed under the MIT License. See LICENSE for more information.
 
-Developed by Nilotpal Dhar • March 2025
+Developed by Nilotpal Dhar • Sep 2025
