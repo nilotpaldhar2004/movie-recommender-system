@@ -1,18 +1,18 @@
 # 🎬 Movie Recommender System
 
 <p align="center">
-  <img src="[https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)" alt="Python"/>
-  <img src="[https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white)" alt="Streamlit"/>
-  <img src="[https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge](https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge)" alt="NLP"/>
-  <img src="[https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white](https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white)" alt="TMDB"/>
+  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
+  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
+  <img src="https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge" alt="NLP"/>
+  <img src="https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white" alt="TMDB"/>
 </p>
 
 <p align="center">
-  <a href="[https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers](https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers)">
-    <img src="[https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow)" alt="Stars"/>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers">
+    <img src="https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow" alt="Stars"/>
   </a>
-  <a href="[https://github.com/nilotpaldhar2004/movie-recommender-system/network/members](https://github.com/nilotpaldhar2004/movie-recommender-system/network/members)">
-    <img src="[https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue](https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue)" alt="Forks"/>
+  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/network/members">
+    <img src="https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue" alt="Forks"/>
   </a>
 </p>
 
