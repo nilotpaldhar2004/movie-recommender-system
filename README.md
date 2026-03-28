@@ -76,7 +76,8 @@ This system implements a vector-space model to find similarities between over 5,
 </p>
 
 ---
-## 🔹 License
+# 🔹 License
+-
 Distributed under the MIT License. See LICENSE for more information.
----
+-
 Developed by **Nilotpal Dhar** • March 2026
