@@ -48,21 +48,12 @@ This system implements a vector-space model to find similarities between over 5,
 
 ---
 
-## 🔹 Features
-- 📊 **Dynamic Search:** Predictive search bar to select from 5,000+ titles.
-- 🖼️ **Poster Integration:** Real-time fetching of movie artwork via API.
-- ⭐ **Detailed Metadata:** Displays ratings and release years alongside recommendations.
-- 📱 **Responsive UI:** Clean, mobile-friendly interface with hover animations.
-
----
-
 ## 🔹 Installation & Local Setup
 
 1. **Clone the repository:**
    ```bash
    git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
    cd movie-recommender-system
----
 
 ## 📈 Project Insights
 
