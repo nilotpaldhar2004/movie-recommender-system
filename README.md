@@ -1,18 +1,18 @@
 # 🎬 Movie Recommender System
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge" alt="NLP"/>
-  <img src="https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white" alt="TMDB"/>
+  <img src="[https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white)" alt="Python"/>
+  <img src="[https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white](https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white)" alt="Streamlit"/>
+  <img src="[https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge](https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge)" alt="NLP"/>
+  <img src="[https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white](https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white)" alt="TMDB"/>
 </p>
 
 <p align="center">
-  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers">
-    <img src="https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow" alt="Stars"/>
+  <a href="[https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers](https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers)">
+    <img src="[https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow](https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow)" alt="Stars"/>
   </a>
-  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/network/members">
-    <img src="https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue" alt="Forks"/>
+  <a href="[https://github.com/nilotpaldhar2004/movie-recommender-system/network/members](https://github.com/nilotpaldhar2004/movie-recommender-system/network/members)">
+    <img src="[https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue](https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue)" alt="Forks"/>
   </a>
 </p>
 
@@ -52,7 +52,7 @@ This system implements a vector-space model to find similarities between over 5,
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
+   git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
    cd movie-recommender-system
    
 2. **Install Dependencies:**
@@ -80,4 +80,4 @@ streamlit run app.py
 ## 🔹 License
 Distributed under the MIT License. See LICENSE for more information.
 
-Developed by Nilotpal Dhar • Sep 2025
+Developed by Nilotpal Dhar • March 2026
