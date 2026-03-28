@@ -62,3 +62,35 @@ The project utilizes the **TMDB 5000 Movie Dataset**.
    ```bash
    git clone [https://github.com/nilotpaldhar2004/movie-recommender-system.git](https://github.com/nilotpaldhar2004/movie-recommender-system.git)
    cd movie-recommender-system
+## Install Dependencies:
+
+Bash
+pip install -r requirements.txt
+## Run the Application:
+
+Bash
+streamlit run app.py
+##🔹 License
+Distributed under the MIT License. See LICENSE for more information.
+
+Developed by Nilotpal Dhar • March 2026
+
+
+---
+
+### ⚖️ Adding the MIT License (Professional Standard)
+Follow these steps to commit the license today:
+
+1.  In your GitHub Repo, click **Add file** -> **Create new file**.
+2.  Name it `LICENSE`.
+3.  Click **Choose a license template** on the right.
+4.  Select **MIT License**.
+5.  Click **Review and submit** (it will automatically add your name and 2026).
+6.  **Commit** the file with the message: `docs: add MIT license`.
+
+### 💡 Why this is better:
+* **Math Inclusion:** Adding the LaTeX formula for **Cosine Similarity** proves you actually understand the underlying machine learning.
+* **API Mention:** Explicitly mentioning the TMDB API shows you can work with external data sources.
+* **Better Badges:** I switched them to `for-the-badge` style, which is larger and more modern.
+
+**Would you like me to help you create a "Requirements.txt" file that matches this setup exactly?
