@@ -65,7 +65,7 @@ This system implements a vector-space model to find similarities between over 5,
    streamlit run app.py
 ---
 
-# 📈 Project Insights
+## Project Insights
 <p align="center">
 <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
 <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
