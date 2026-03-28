@@ -74,5 +74,5 @@ This system implements a vector-space model to find similarities between over 5,
 <p align="center">
 <i>Track the growth of this project over time!</i>
 </p>
----
-Developed by Nilotpal Dhar • March 2026
+
+--- Developed by **Nilotpal Dhar** • March 2026 ---
