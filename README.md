@@ -54,7 +54,6 @@ This system implements a vector-space model to find similarities between over 5,
    ```bash
    git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
    cd movie-recommender-system
-   
 Install Dependencies:
 
 pip install -r requirements.txt
