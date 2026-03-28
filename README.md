@@ -47,7 +47,7 @@ This system implements a vector-space model to find similarities between over 5,
 5. **UI Rendering:** Fetching high-resolution posters via API calls to the TMDB database based on `movie_id`.
 
 ---
----
+
 ## 🔹 Installation & Local Setup
 
 1. **Clone the repository:**
@@ -63,7 +63,7 @@ This system implements a vector-space model to find similarities between over 5,
 ---
 
 
-📈 Project Insights
+# 📈 Project Insights
 <p align="center">
 <a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
 <img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
@@ -73,7 +73,7 @@ This system implements a vector-space model to find similarities between over 5,
 <i>Track the growth of this project over time!</i>
 </p>
 ---
-## 🔹 License
+##  🔹 License
 Distributed under the MIT License. See LICENSE for more information.
 ---
 Developed by Nilotpal Dhar • March 2026
