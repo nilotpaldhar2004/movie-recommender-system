@@ -4,17 +4,13 @@ import requests
 import joblib
 import numpy as np
 
-# ----------------------------
-# 🎬 Streamlit Page Config
-# ----------------------------
+
 st.set_page_config(
     page_title="🎬 Movie Recommender",
     layout="wide"
 )
 
-# ----------------------------
-# 🌌 Background + Hover Tooltip Styling
-# ----------------------------
+
 def set_background():
     st.markdown(
         """
@@ -98,9 +94,7 @@ def set_background():
 
 set_background()
 
-# ----------------------------
-# 🖼️ Fetch Poster + Info (Cached)
-# ----------------------------
+
 @st.cache_data
 def fetch_poster_info(movie_id):
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=8265bd1679663a7ea12ac168da84d2e8&language=en-US"
@@ -114,9 +108,6 @@ def fetch_poster_info(movie_id):
         poster_url = "https://via.placeholder.com/300x450?text=No+Image"
     return poster_url, release_date, rating
 
-# ----------------------------
-# ⭐ Convert rating (0-10) to stars
-# ----------------------------
 def rating_to_stars(rating):
     rating_out_of_5 = rating / 2
     full_stars = int(rating_out_of_5)
@@ -124,9 +115,7 @@ def rating_to_stars(rating):
     empty_stars = 5 - full_stars - half_star
     return "★" * full_stars + "½" * half_star + "☆" * empty_stars
 
-# ----------------------------
-# 🎯 Recommendation Function
-# ----------------------------
+
 def recommend(movie):
     index = movies[movies['title'] == movie].index[0]
     distances = list(enumerate(similarity[index]))
@@ -147,15 +136,11 @@ def recommend(movie):
 
     return recommended_movie_names, recommended_movie_posters, release_dates, ratings
 
-# ----------------------------
-# 📂 Load Data
-# ----------------------------
+
 movies = pickle.load(open('movie_list.pkl', 'rb'))
 similarity = joblib.load('similarity_quantized.pkl').astype(np.float32) / 255
 
-# ----------------------------
-# 🎬 App UI
-# ----------------------------
+
 st.markdown("<h1 style='text-align: center;'>🎥 Movie Recommender</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>Discover movies you’ll love, powered by Machine Learning!</h4>", unsafe_allow_html=True)
 st.markdown("---")
@@ -166,9 +151,7 @@ selected_movie = st.selectbox(
     movie_list
 )
 
-# ----------------------------
-# 🚀 Show Recommendations
-# ----------------------------
+
 if st.button("✨ Show Recommendations"):
 
     rec_names, rec_posters, rec_years, rec_ratings = recommend(selected_movie)
@@ -195,9 +178,7 @@ if st.button("✨ Show Recommendations"):
                 <p style='text-align:center; color:white; font-weight:bold; margin-top:4px;'>{names[i]}</p>
             """, unsafe_allow_html=True)
 
-# ----------------------------
-# 🧑‍💻 Footer
-# ----------------------------
+
 st.markdown("---")
 st.markdown(
     "<p style='text-align: center; font-size: 12px; color:#ddd;'>👨‍💻 Built by <b>Nilotpal Dhar</b> | Powered by Streamlit & TMDB API</p>",
