@@ -1,78 +1,195 @@
-# 🎬 Movie Recommender System
+# 🎬 CineMatch — NLP-Powered Movie Recommender
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python&logoColor=white" alt="Python"/>
-  <img src="https://img.shields.io/badge/Streamlit-App-red?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
-  <img src="https://img.shields.io/badge/NLP-Scikit--Learn-orange?style=for-the-badge" alt="NLP"/>
-  <img src="https://img.shields.io/badge/API-TMDB-01b4e4?style=for-the-badge&logo=the-movie-database&logoColor=white" alt="TMDB"/>
-</p>
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Site-brightgreen?style=for-the-badge&logo=github)](https://nilotpaldhar2004.github.io/movie-recommender-system/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-App-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white)](https://movie-recommender-system-cma4qjqed65yausybn4vrd.streamlit.app)
+[![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+[![Dataset](https://img.shields.io/badge/Dataset-TMDB%205000-orange?style=for-the-badge)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
+[![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-<p align="center">
-  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/stargazers">
-    <img src="https://img.shields.io/github/stars/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=yellow" alt="Stars"/>
-  </a>
-  <a href="https://github.com/nilotpaldhar2004/movie-recommender-system/network/members">
-    <img src="https://img.shields.io/github/forks/nilotpaldhar2004/movie-recommender-system?style=for-the-badge&logo=github&color=blue" alt="Forks"/>
-  </a>
-</p>
+A content-based movie recommendation engine built with NLP and cosine similarity. Type any movie title — the system returns 5 films with matching storylines, genres, cast, and cinematic DNA. Deployed as a FastAPI backend on Render with a standalone frontend on GitHub Pages.
 
-<p align="center">
-  <b>If you find this project helpful, please consider giving it a ⭐ to show your support!</b>
-</p>
-
-An intelligent **Content-Based Movie Recommendation Engine** that utilizes Natural Language Processing (NLP) to suggest movies based on metadata similarity.
-
-🚀 **Live Demo:** [🎬 Open Movie Recommender App](https://movie-recommender-system-cma4qjqed65yausybn4vrd.streamlit.app/)
+🚀 **[Try the Live Demo](https://nilotpaldhar2004.github.io/movie-recommender-system/)**
 
 ---
 
-## 🔹 Project Overview
-This system implements a vector-space model to find similarities between over 5,000 movies. By processing text data (genres, cast, crew, and overviews), it converts movies into vectors and uses **Cosine Similarity** to recommend the top 5 closest matches.
+## 🧠 How It Works
 
-### 🛠️ Tech Stack
-- **Engine:** Python, Pandas, NumPy
-- **Machine Learning:** Scikit-Learn (`CountVectorizer`, `Cosine Similarity`)
-- **Frontend:** Streamlit (Custom CSS & UI components)
-- **Data Source:** TMDB API (for real-time poster fetching)
+```
+User Input (movie title)
+        ↓
+  Text Vectorization (CountVectorizer on tags: genres + cast + crew + overview + keywords)
+        ↓
+  Cosine Similarity Matrix (5000 × 5000, quantized to uint8 for memory efficiency)
+        ↓
+  Top-5 Nearest Neighbours (sorted by similarity score, excluding input movie)
+        ↓
+  TMDB API (fetches poster, rating, year, genres, overview for each result)
+        ↓
+  JSON Response → Frontend renders cards
+```
+
+**Why content-based filtering?**
+Unlike collaborative filtering (which needs user rating history), content-based filtering works from day one — it needs only the movie's metadata. This makes it suitable for cold-start scenarios and real-time deployment without a database.
 
 ---
 
-## ⚙️ How It Works (The Pipeline)
+## ✨ Features
 
-1. **Data Preprocessing:** Merging `tmdb_5000_movies` and `tmdb_5000_credits` datasets.
-2. **Tag Generation:** Stemming and cleaning metadata (Overview + Genre + Keywords + Cast + Crew).
-3. **Vectorization:** Converting text tags into a 5,000-dimensional vector space using Bag-of-Words.
-4. **Similarity Engine:** Calculating the distance between movie vectors using the Cosine Similarity formula:
-   $$similarity = \cos(\theta) = \frac{A \cdot B}{\|A\| \|B\|}$$
-5. **UI Rendering:** Fetching high-resolution posters via API calls to the TMDB database based on `movie_id`.
+- **Instant autocomplete** — starts from the first character, sorted starts-with first then contains
+- **5,000-movie corpus** — trained on the TMDB 5000 Movie Dataset from Kaggle
+- **Live TMDB metadata** — posters, ratings, release year, genres, and overviews fetched in real time
+- **Selected film card** — shows full details of your searched movie alongside recommendations
+- **Hover overlay** — movie overview slides in on poster hover
+- **Responsive** — works on mobile (2 columns), tablet (3–4 columns), and desktop (5 columns)
+- **Two deployment modes** — FastAPI backend (Render) + GitHub Pages frontend, or standalone Streamlit
 
 ---
 
-## 🔹 Installation & Local Setup
+## 🛠️ Tech Stack
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
-   cd movie-recommender-system
+| Layer | Technology |
+|:------|:-----------|
+| NLP / ML | Scikit-Learn (CountVectorizer, cosine\_similarity) |
+| Backend | FastAPI, Uvicorn, Requests |
+| Frontend | HTML5, CSS3, Vanilla JavaScript |
+| Deployment | Render (backend) + GitHub Pages (frontend) |
+| Streamlit | `app.py` for Streamlit Cloud / local dev |
+| Data | TMDB 5000 Movie Dataset (Kaggle) |
+| External API | TMDB (The Movie Database) |
 
-
-2. **Install Dependencies:**
-   ```bash
-   pip install -r requirements.txt
----
-3. **Run the Application:**
-   ```bash
-   streamlit run app.py
 ---
 
-## Project Insights
-<p align="center">
-<a href="https://star-history.com/#nilotpaldhar2004/movie-recommender-system&Date">
-<img src="https://api.star-history.com/svg?repos=nilotpaldhar2004/movie-recommender-system&theme=dark" alt="Star History Chart" width="600"/>
-</a>
-</p>
-<p align="center">
-<i>Track the growth of this project over time!</i>
-</p>
+## 📂 Project Structure
 
-Developed by **Nilotpal Dhar** • March 2026
+```
+movie-recommender-system/
+│
+├── main.py                    # FastAPI backend (Render deployment)
+├── app.py                     # Streamlit version (local / Streamlit Cloud)
+├── index.html                 # Standalone frontend (GitHub Pages)
+├── requirements.txt           # Python dependencies
+│
+└── (gitignored — generated by notebook)
+    ├── movie_list.pkl         # DataFrame of movie metadata
+    └── similarity_quantized.pkl  # Quantized cosine similarity matrix (uint8)
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- Python 3.10+
+- ~500MB disk space for the similarity matrix
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
+cd movie-recommender-system
+```
+
+### 2. Install dependencies
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Generate model files
+Run the Jupyter notebook to produce `movie_list.pkl` and `similarity_quantized.pkl`:
+```bash
+jupyter notebook
+# Open and run: Movie Recommender System.ipynb
+```
+
+### 4a. Run FastAPI backend
+```bash
+uvicorn main:app --reload --port 8000
+```
+Open `http://localhost:8000` — FastAPI serves `index.html` directly.
+
+### 4b. Run Streamlit version
+```bash
+streamlit run app.py
+```
+
+---
+
+## 🌐 Deployment
+
+### Backend → Render
+
+1. Push your code to GitHub (`.pkl` files are gitignored — keep them locally or use Render Disk)
+2. **New → Web Service → connect your GitHub repo**
+3. **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
+4. **Environment:** Python 3
+
+> **Keep-alive:** Create a free UptimeRobot monitor pointing at `https://your-app.onrender.com/ping` every 10 minutes to prevent cold-start delays.
+
+### Frontend → GitHub Pages
+
+1. **Settings → Pages → Source → main branch → / (root)**
+2. Update `API_BASE` in `index.html` with your Render URL:
+```javascript
+// Line ~5 of the <script> block:
+'https://your-movie-api.onrender.com'   // ← replace this
+```
+3. Commit and push — GitHub Pages deploys within 60 seconds.
+
+---
+
+## 📡 API Reference
+
+### `GET /movies`
+Returns all 5,000 movie titles for autocomplete.
+```json
+{ "count": 4806, "movies": ["Avatar", "Inception", ...] }
+```
+
+### `GET /recommend?movie=Inception&n=5`
+Returns top-N recommendations for the given title.
+```json
+{
+  "query": "Inception",
+  "selected": {
+    "title": "Inception",
+    "poster": "https://image.tmdb.org/t/p/w500/...",
+    "rating": 8.3,
+    "year": "2010",
+    "genres": ["Action", "Sci-Fi", "Thriller"],
+    "overview": "A thief who steals corporate secrets..."
+  },
+  "recommendations": [ { "title": "...", "poster": "...", ... }, ... ]
+}
+```
+
+### `GET /health`
+```json
+{ "status": "ok", "movies_loaded": true, "model_loaded": true, "total_movies": 4806 }
+```
+
+### `GET /ping`
+```json
+{ "pong": true }
+```
+
+Full interactive docs at `/docs` (Swagger UI) when the server is running.
+
+---
+
+## ⚠️ Important Notes
+
+**Model files are not committed to Git** (`movie_list.pkl` and `similarity_quantized.pkl`).  
+They are generated by the Jupyter notebook and can be large (the similarity matrix is ~23MB quantized).  
+For Render deployment, either:
+- Upload them to **Render Disk** (persistent storage), or
+- Include them in a Docker image, or
+- Re-generate them at startup (slow but works for demos)
+
+---
+
+## 📄 License
+
+MIT License — see [LICENSE](LICENSE) for details.
+
+---
+
+Developed by **Nilotpal Dhar** · [Portfolio](https://nilotpal-dhar.vercel.app) · [LinkedIn](https://www.linkedin.com/in/nilotpal-dhar-24b304294/) · [Kaggle](https://www.kaggle.com/nilotpaldhar)
