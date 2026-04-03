@@ -1,15 +1,15 @@
-# Web app
-streamlit
-requests
+# Web Framework
+fastapi==0.115.0
+uvicorn==0.32.0
 
-# Data handling
-pandas
-numpy
-joblib
+# ML / Data 
+scikit-learn==1.5.2
+numpy==1.26.4
+pandas==2.2.3
+joblib==1.4.2
 
-# Machine learning 
-scikit-learn
+# HTTP 
+requests==2.32.3
 
-# Visualization (optional, only if you use plots)
-matplotlib
-seaborn
+# Streamlit version 
+streamlit==1.40.0
