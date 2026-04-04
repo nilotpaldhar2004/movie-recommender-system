@@ -1,16 +1,33 @@
-# Python
+# Large ML model files 
+movie_list.pkl
+similarity_quantized.pkl
+
+# Dataset
+Dataset.zip
+*.csv
+
+# Python cache 
 __pycache__/
 *.py[cod]
 *$py.class
-.venv/
+*.pyo
+
+# Virtual environments
 venv/
-ENV/
+env/
+.venv/
+.env
 
-# Streamlit
-.streamlit/
-static/
+# IDE & editor
+.idea/
+.vscode/
+*.swp
 
-# Dataset (Optional: if you want users to download it themselves to save space)
-*.csv
-*.zip
-*.pkl
+# OS generated
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
