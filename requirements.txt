@@ -1,0 +1,18 @@
+# ── Web Framework ─────────────────────────────────────────────────────────────
+fastapi==0.115.0
+uvicorn==0.32.0
+
+# ── ML / Data ─────────────────────────────────────────────────────────────────
+scikit-learn==1.5.2
+numpy==1.26.4
+pandas==2.2.3
+joblib==1.4.2
+
+# ── HTTP (TMDB API calls) ──────────────────────────────────────────────────────
+requests==2.32.3
+
+# ── Streamlit version (used by app.py for local/cloud deployment) ──────────────
+streamlit==1.40.0
+
+# ── CORS support (included in fastapi, listed for clarity) ────────────────────
+# python-multipart not needed here (no file uploads)

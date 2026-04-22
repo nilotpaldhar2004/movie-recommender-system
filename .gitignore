@@ -1,0 +1,24 @@
+# Python & Environment
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+.env
+
+# Large Binary Files (Manually upload these to HF)
+*.pkl
+*.zip
+*.csv
+*.joblib
+*.ipynb
+
+# Project Folders to Ignore
+Images/
+.idea/
+.vscode/
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
