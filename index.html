@@ -944,9 +944,10 @@
 </footer>
 
 <script>
-  /* ── API Base ─────────────────────────────────────────────── */
-  const API_BASE = "https://huggingface.co/spaces/nilotpaldhar2004/movie-recommender-ai";
-
+  /* ── API Base Logic ─────────────────────────────────────────────── */
+  const API_BASE = window.location.hostname.includes('github.io') || window.location.hostname.includes('localhost')
+  ? 'https://nilotpaldhar2004-movie-recommender-ai.hf.space' 
+  : window.location.origin;
   /* ── State ────────────────────────────────────────────────── */
   let allMovies     = [];
   let selectedTitle = '';
