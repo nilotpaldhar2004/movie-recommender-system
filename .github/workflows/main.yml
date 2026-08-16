@@ -2,7 +2,7 @@ name: Render Keep Alive
 
 on:
   schedule:
-    # Runs every 10 minutes to prevent Render's 15-minute sleep timer
+    # Runs every 10 minutes to prevent sleep
     - cron: '*/10 * * * *'
   workflow_dispatch:
 
@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping CineMatch Backend
         run: |
-          curl -s --max-time 15 https://cinematch-ai-recommender.onrender.com/ping || true
+          curl -s --max-time 15 https://movie-recommender-system-vj3w.onrender.com/ping || true
