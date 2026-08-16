@@ -939,14 +939,17 @@
     <a class="footer-link" href="https://www.linkedin.com/in/nilotpal-dhar-24b304294/" target="_blank">LinkedIn</a>
   </div>
   <div class="footer-note">
-  Data from TMDB · NLP Cosine Similarity · Deployed via Docker on Hugging Face Spaces
+  Data from TMDB · NLP Cosine Similarity · Deployed on Render + GitHub Pages
   </div>
 </footer>
 
 <script>
-  /* ── API Base ─────────────────────────────────────────────── */
-  const API_BASE = window.location.origin;
+/* ── API Base Logic ─────────────────────────────────────────────── */
+const RENDER_BACKEND_URL = 'https://cinematch-ai-recommender.onrender.com';
 
+const API_BASE = window.location.hostname.includes('github.io')
+  ? RENDER_BACKEND_URL
+  : window.location.origin;
   /* ── State ────────────────────────────────────────────────── */
   let allMovies     = [];
   let selectedTitle = '';

@@ -7,12 +7,9 @@ venv/
 ENV/
 .env
 
-# Large Binary Files (Manually upload these to HF)
-*.pkl
+# Raw Datasets & Archive Files
 *.zip
 *.csv
-*.joblib
-*.ipynb
 
 # Project Folders to Ignore
 Images/

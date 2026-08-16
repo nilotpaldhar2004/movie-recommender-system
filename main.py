@@ -22,15 +22,17 @@ logger = logging.getLogger("movie-recommender")
 TMDB_API_KEY  = os.getenv("TMDB_API_KEY", "8265bd1679663a7ea12ac168da84d2e8")
 TMDB_BASE     = "https://api.themoviedb.org/3"
 TMDB_IMG_BASE = "https://image.tmdb.org/t/p/w500"
-PORT      = int(os.getenv("PORT", 7860))
+PORT          = int(os.getenv("PORT", 10000))
 
 
 ml = {}
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     logger.info("Loading movie metadata …")
     try:
-        ml["movies"] = pickle.load(open("movie_list.pkl", "rb"))
+        with open("movie_list.pkl", "rb") as f:
+            ml["movies"] = pickle.load(f)
         logger.info("Loaded %d movies.", len(ml["movies"]))
     except FileNotFoundError:
         logger.error("movie_list.pkl not found.")
@@ -49,6 +51,7 @@ async def lifespan(app: FastAPI):
     ml.clear()
     logger.info("Shutting down — resources released.")
 
+
 app = FastAPI(
     title="Movie Recommender API",
     description="NLP content-based movie recommendation engine using cosine similarity on TMDB data.",
@@ -60,9 +63,11 @@ app = FastAPI(
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 @app.middleware("http")
 async def timing_middleware(request, call_next):
@@ -70,6 +75,7 @@ async def timing_middleware(request, call_next):
     response = await call_next(request)
     response.headers["X-Process-Time-Ms"] = f"{(time.perf_counter()-t0)*1000:.1f}"
     return response
+
 
 def fetch_movie_details(movie_id: int) -> dict:
     try:
@@ -98,7 +104,7 @@ async def serve_frontend():
 
 @app.get("/ping", include_in_schema=False)
 async def ping():
-    """Keep-alive endpoint — point UptimeRobot here every 10 minutes."""
+    """Keep-alive endpoint for automated GitHub Action pings."""
     return {"pong": True}
 
 
@@ -118,7 +124,6 @@ async def health():
 
 @app.get("/movies", tags=["Data"])
 async def list_movies():
-
     if ml.get("movies") is None:
         raise HTTPException(503, "Model not ready.")
     titles = ml["movies"]["title"].tolist()
@@ -127,7 +132,6 @@ async def list_movies():
 
 @app.get("/recommend", tags=["Inference"])
 async def recommend(movie: str, n: int = 5):
-
     movies_df  = ml.get("movies")
     similarity = ml.get("similarity")
 
@@ -142,7 +146,6 @@ async def recommend(movie: str, n: int = 5):
 
     idx       = matches.index[0]
     distances = sorted(enumerate(similarity[idx]), key=lambda x: x[1], reverse=True)
-
 
     selected_id      = int(movies_df.iloc[idx].id)
     selected_details = fetch_movie_details(selected_id)
@@ -162,7 +165,8 @@ async def recommend(movie: str, n: int = 5):
         "recommendations": recommendations,
     }
 
+
 if __name__ == "__main__":
     import uvicorn
     logger.info("Starting Movie Recommender API on port %d", PORT)
-    uvicorn.run("main:app", host="0.0.0.0", port=PORT, reload=False)
+    uvicorn.run(app, host="0.0.0.0", port=PORT)

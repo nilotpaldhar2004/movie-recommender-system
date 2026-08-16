@@ -1,24 +1,15 @@
-name: Sync to Hugging Face hub
+name: Render Keep Alive
+
 on:
-  push:
-    branches: [main]
+  schedule:
+    # Runs every 10 minutes to prevent Render's 15-minute sleep timer
+    - cron: '*/10 * * * *'
   workflow_dispatch:
 
 jobs:
-  sync-to-hub:
+  ping-render:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-          lfs: true
-
-      - name: Push to hub
-        env:
-          HF_TOKEN: ${{ secrets.HF_TOKENG }}
+      - name: Ping CineMatch Backend
         run: |
-          git config --global user.email "dharnilotpal31@gmail.com"
-          git config --global user.name "Nilotpal Dhar"
-          git remote add hf https://nilotpaldhar2004:$HF_TOKEN@huggingface.co/spaces/nilotpaldhar2004/movie-recommender-ai
-          git push --force hf main
+          curl -s --max-time 15 https://cinematch-ai-recommender.onrender.com/ping || true

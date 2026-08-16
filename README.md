@@ -1,23 +1,20 @@
----
-title: Movie Recommender AI
-emoji: 🎬
-colorFrom: red
-colorTo: gray
-sdk: docker
-app_file: main.py
-pinned: false
----
 # 🎬 CineMatch — NLP-Powered Movie Recommender
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live%20Site-brightgreen?style=for-the-badge&logo=github)](https://nilotpaldhar2004.github.io/movie-recommender-system/)
-[![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://fastapi.tiangolo.com/)
+<div align="center">
+
+[![Live Demo](https://img.shields.io/badge/Demo-Live%20Site-brightgreen?style=for-the-badge&logo=github)](https://nilotpaldhar2004.github.io/movie-recommender-system-main/)
+[![Backend](https://img.shields.io/badge/Backend-FastAPI-009688?style=for-the-badge&logo=fastapi)](https://cinematch-ai-recommender.onrender.com)
 [![Dataset](https://img.shields.io/badge/Dataset-TMDB%205000-orange?style=for-the-badge)](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
 [![License](https://img.shields.io/badge/License-MIT-blue?style=for-the-badge)](LICENSE)
 
-A content-based movie recommendation engine built with NLP and cosine similarity. Type any movie title — the system returns 5 films with matching storylines, genres, cast, and cinematic DNA. Deployed as a FastAPI backend on Render with a standalone frontend on GitHub Pages.
+**A content-based movie recommendation engine built with NLP and cosine similarity.**
 
-🚀 **[Try the Live Demo](https://nilotpaldhar2004.github.io/movie-recommender-system/)**
+[🚀 Try Live Demo](https://nilotpaldhar2004.github.io/movie-recommender-system-main/) · [API Backend](https://cinematch-ai-recommender.onrender.com) · [Portfolio](https://nilotpal-dhar.vercel.app)
+
+</div>
+
+Type any movie title — the system returns 5 films with matching storylines, genres, cast, and cinematic DNA. Deployed as a FastAPI backend on Render with a standalone frontend on GitHub Pages.
 
 ---
 
@@ -55,7 +52,7 @@ Unlike collaborative filtering (which requires user rating history), content-bas
 - **Hover overlay** — movie overview slides in on poster hover
 - **Cinematic UI** — deep indigo-violet gradient background with electric cyan accents
 - **Responsive** — 2 columns (mobile) → 3–4 columns (tablet) → 5 columns (desktop)
-- **Keep-alive endpoint** — `/ping` prevents Render free-tier cold-start delays
+- **Keep-alive automation** — a scheduled GitHub Actions workflow pings `/ping` to eliminate Render free-tier cold-start delays
 
 ---
 
@@ -63,10 +60,10 @@ Unlike collaborative filtering (which requires user rating history), content-bas
 
 | Layer | Technology |
 |:------|:-----------|
-| NLP / ML | Scikit-Learn (CountVectorizer, cosine\_similarity) |
+| NLP / ML | Scikit-Learn (CountVectorizer, cosine_similarity), NumPy, Joblib |
 | Backend | FastAPI, Uvicorn, Requests |
 | Frontend | HTML5, CSS3, Vanilla JavaScript |
-| Deployment | Render (backend) + GitHub Pages (frontend) |
+| Deployment & CI/CD | Render (backend), GitHub Pages (frontend), GitHub Actions |
 | Training | Jupyter Notebook |
 | Data | TMDB 5000 Movie Dataset (Kaggle) |
 | External API | TMDB (The Movie Database) |
@@ -82,14 +79,15 @@ movie-recommender-system/
 ├── index.html                       # Standalone frontend — GitHub Pages
 ├── Movie Recommender System.ipynb   # Training notebook — generates model files
 ├── requirements.txt                 # Python dependencies (pinned)
+├── movie_list.pkl                   # Movie metadata DataFrame (~5MB)
+├── similarity_quantized.pkl         # Quantized cosine similarity matrix (~23MB)
+├── .github/workflows/main.yml       # Scheduled keep-alive ping (GitHub Actions)
+├── .gitignore                       # Git ignore rules
 ├── LICENSE                          # MIT License
-├── README.md                        # Project documentation
-│
-└── (gitignored — not committed)
-    ├── movie_list.pkl               # Movie metadata DataFrame (~5MB)
-    ├── similarity_quantized.pkl     # Quantized cosine similarity matrix (~23MB)
-    └── Dataset.zip                  # Raw TMDB dataset (download from Kaggle)
+└── README.md                        # Project documentation
 ```
+
+> **Note:** `movie_list.pkl` and `similarity_quantized.pkl` are committed directly to the repository. Combined they're under 30MB — well within GitHub's 100MB file limit — so Render's free tier can load them immediately with zero extra disk configuration.
 
 ---
 
@@ -98,63 +96,60 @@ movie-recommender-system/
 ### Prerequisites
 
 - Python 3.10+
-- ~500MB disk space for model files
+- pip
 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/nilotpaldhar2004/movie-recommender-system.git
-cd movie-recommender-system
+git clone https://github.com/nilotpaldhar2004/movie-recommender-system-main.git
+cd movie-recommender-system-main
 ```
 
-### 2. Install dependencies
+### 2. Set up a virtual environment and install dependencies
 
 ```bash
+python -m venv venv
+source venv/bin/activate        # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
-### 3. Download the dataset
+### 3. Verify the model files
 
-Download the TMDB 5000 Movie Dataset from Kaggle and place it in the project root:
-
-```
-https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
-```
-
-### 4. Generate model files
-
-Open and run the Jupyter notebook to produce `movie_list.pkl` and `similarity_quantized.pkl`:
+`movie_list.pkl` and `similarity_quantized.pkl` are already included in the repository root alongside `main.py`. If you want to regenerate them yourself, download the [TMDB 5000 Movie Dataset](https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata) and run the training notebook:
 
 ```bash
 jupyter notebook "Movie Recommender System.ipynb"
 ```
 
-Run all cells — this generates both model files in the project root.
-
-### 5. Start the FastAPI server
+### 4. Start the FastAPI server
 
 ```bash
-uvicorn main:app --reload --port 8000
+python main.py
 ```
 
-Open `http://localhost:8000` — FastAPI serves `index.html` directly.
+Open `http://localhost:10000` — FastAPI serves `index.html` directly.
 
 ---
 
 ## 🌐 Deployment
 
+| Component | Host | URL |
+|:----------|:-----|:----|
+| Frontend (`index.html`) | GitHub Pages | https://nilotpaldhar2004.github.io/movie-recommender-system-main/ |
+| Backend (`main.py`) | Render | https://cinematch-ai-recommender.onrender.com |
+
 ### Backend → Render (free tier)
 
-1. Push your code to GitHub — `.pkl` files and `Dataset.zip` are gitignored, **do not commit them**
+1. Push your code to GitHub — the `.pkl` model files are committed, not gitignored
 2. Go to [render.com](https://render.com) → **New → Web Service → connect your GitHub repo**
 3. Set the **Start Command:**
    ```
-   uvicorn main:app --host 0.0.0.0 --port $PORT
+   python main.py
    ```
 4. Set **Environment:** Python 3
-5. Upload `movie_list.pkl` and `similarity_quantized.pkl` using **Render Disk** (persistent storage)
+5. Deploy — Render will provision the live public URL
 
-> **Keep-alive tip:** Create a free [UptimeRobot](https://uptimerobot.com) monitor pointing at `https://your-app.onrender.com/ping` every 10 minutes to prevent cold-start delays on the free tier.
+> **Keep-alive:** A scheduled [GitHub Actions](https://docs.github.com/en/actions) workflow (`.github/workflows/main.yml`) pings `https://your-app.onrender.com/ping` on a recurring schedule to prevent cold-start delays on Render's free tier — no third-party monitor required.
 
 ### Frontend → GitHub Pages
 
@@ -165,8 +160,8 @@ Open `http://localhost:8000` — FastAPI serves `index.html` directly.
 // In the <script> block at the bottom of index.html:
 const API_BASE = (
   window.location.hostname === 'localhost' || ...
-) ? 'http://localhost:8000'
-  : 'https://your-movie-api.onrender.com'; // ← replace with your Render URL
+) ? 'http://localhost:10000'
+  : 'https://cinematch-ai-recommender.onrender.com';
 ```
 
 3. Commit and push — GitHub Pages deploys within 60 seconds.
@@ -203,8 +198,7 @@ Returns top-N content-based recommendations.
     "overview": "A thief who steals corporate secrets through dream-sharing..."
   },
   "recommendations": [
-    { "title": "Interstellar", "poster": "...", "rating": 8.1, "year": "2014", "genres": [...], "overview": "..." },
-    ...
+    { "title": "Interstellar", "poster": "...", "rating": 8.1, "year": "2014", "genres": ["Adventure", "Drama", "Science Fiction"], "overview": "..." }
   ]
 }
 ```
@@ -217,25 +211,13 @@ Returns top-N content-based recommendations.
 
 ### `GET /ping`
 
+Keep-alive endpoint used by the scheduled GitHub Actions workflow.
+
 ```json
 { "pong": true }
 ```
 
 Full interactive documentation available at `/docs` (Swagger UI) when the server is running.
-
----
-
-## ⚠️ Important — Model Files
-
-`movie_list.pkl`, `similarity_quantized.pkl`, and `Dataset.zip` are **gitignored and not committed to this repository**.
-
-They are generated locally by the Jupyter notebook. For Render deployment:
-
-| Option | Description |
-|:-------|:------------|
-| **Render Disk** | Upload both `.pkl` files to persistent storage — recommended |
-| **Docker** | Bundle files into a Docker image for fully reproducible deployment |
-| **Re-generate at startup** | Add notebook execution to startup — slow (~2 min) but zero config |
 
 ---
 
